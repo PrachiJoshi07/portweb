@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figma+Hand&display=swap">
+    <title>Portfolio - Prachi Joshi</title>
+
+
+    <!-- Script for email.js  -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      emailjs.init('your_public_key_here'); // Replace 'your_public_key_here' with your actual public key
+    </script>
+    
+ 
+    <!-- Style for animation of text -->
+    <style>
+        /* Keyframes for text animation */
+        @keyframes changeText {
+            20%, 30% { content: "Web Designer"; }
+            40%, 50% { content: "UI/UX Designer"; }
+            60%, 70% { content: "Frontend Developer"; }
+        }
+        #animated-heading::before {
+            content: "Web Designer";
+            animation: changeText 20s infinite;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .image-content img {
+            width: 122px;
+            height: 122px;
+            border-radius: 0;
+            
+            padding: 10px;
+            margin: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+        }
+        .image-content img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 5px #eefddf;
+        }
+    </style>
+
+ </head>
+ 
+ <body style="font-family: Arial, Helvetica, sans-serif; margin: 0; padding-bottom: 10px;"></body>
+ 
+ <!-- Header section -->
+
+ <header style="background-color: #001413; padding: 20px; text-align: center;  margin-bottom: 0; padding-bottom: 0px;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="flex: 2;">
+            <h1 style="color: #eefddf; font-size: 2.5em; margin: 0;  font-family: Arial, sans-serif; letter-spacing: 2px;">
+                Prachi Joshi
+            </h1>
+        </div>
+        <nav style="flex: 2; text-align: left;">
+            <ul style="list-style-type: none; font-family: Arial, sans-serif;font-size: 1em; margin: 0; padding: 0;">
+                <li style="display: inline-block; margin: 0 10px;">
+                    <a href="#home" style="color: #eefddf; text-decoration: none; font-weight: bold; font-size: 1.2em;">Home</a>
+                </li>
+                <li style="display: inline-block; margin: 0 10px;">
+                    <a href="" target="_blank" style="color: #eefddf; text-decoration: none; font-weight: bold; font-size: 1.2em;">Resume</a>
+                </li>
+                <li style="display: inline-block; margin: 0 10px;">
+                    <a href="#projects" style="color: #eefddf; text-decoration: none; font-weight: bold; font-size: 1.2em;">Projects</a>
+                </li>
+                <li style="display: inline-block; margin: 0 10px;">
+                    <a href="#contact" style="color: #eefddf; text-decoration: none; font-weight: bold; font-size: 1.2em;">Contact</a>
+                </li>
+               
+            </ul>
+        </nav>
+    </div>
+ </header>
+
+ <!-- background: linear-gradient(0deg, #003B36 0%, #EEFDDF 40%); -->
+
+ <!-- Animation for animated background -->
+
+ <style>
+    /* Full-screen container for the dots animation */
+    #dots-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        overflow: hidden;
+        background: #001413;
+    }
+
+    /* Dot styles */
+    .dot {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.6);
+        animation: float 10s infinite;
+        pointer-events: none;
+    }
+
+    /* Dot animation */
+    @keyframes float {
+        0% {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(100vh);
+            opacity: 0;
+        }
+    }
+ </style>
+
+
+<!-- Home section -->
+
+ <body>
+ <section id="home" style="position: relative; padding: 0px; text-align: left; color: #eefddf; height: 100vh;">
+    <div id="dots-container"></div>
+    <div class="intro" style="display: flex; align-items: center; justify-content: center; height: 100%; padding: 1rem 1.5rem;">
+
+
+
+          <!-- Links Container -->
+          <div style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; align-items: center;">
+            <a href="" target="_blank">
+                <img src="/Images/linkedein.jpg" alt="LinkedIn" style="width: 40px; height: 40px; margin-bottom: 10px;">
+            </a>
+            <a href="" target="_blank">
+                <img src="/Images/githubbb.jpg" alt="GitHub" style="width: 40px; height: 40px; margin-bottom: 10px;">
+            </a>
+            <a href="mailto:xyz@gmail.com" target="_blank">
+                <img src="/Images/gmailll.jpg" alt="Gmail" style="width: 40px; height: 40px;">
+            </a>
+        </div>
+
+
+        <div style="flex: 2; max-width: 600px;">
+            <h1 id="animated-heading" style="font-size: 3em; color: #eefddf; margin-bottom: 10px;"></h1>
+            <p style="font-size: 1.5em; color: #eefddf">Frontend Developer and UI/UX Designer</p>
+            <p class="subtext" style="font-size: 1.2em; color: #eefddf; max-width: 400px;">Welcome to my portfolio! Transforming ideas <br>
+            into intuitive software solutions with creativity.</p>
+            <div style="margin-top: 20px;">
+                <a href="#about-me">
+                    <button style="background-color: #eefddf; color: #001413 ; border: none; padding: 12px 24px; font-size: 1.1em; cursor: pointer; border-radius: 9999px; transition: background-color 0.3s ease;">About Me</button>
+                </a>
+            </div>
+        </div>
+        <div style="text-align: center;">
+           
+                <img usemap="#image-map" src="/Images/Pimg2.jpg" alt="Prachi Joshi" style="width: 500px; height: 500px; object-fit: cover;">
+
+                
+
+        </div>
+    </div>
+ </section>
+
+
+<!-- Script for floating dots -->
+
+ <script>
+    // Function to create floating dots
+    function createDots() {
+        const dotContainer = document.getElementById('dots-container');
+        const numberOfDots = 100; // Number of dots to generate
+
+        for (let i = 0; i < numberOfDots; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            dot.style.width = dot.style.height = Math.random() * 5 + 2 + 'px'; // Random size
+            dot.style.top = Math.random() * 100 + 'vh'; // Random vertical position
+            dot.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+            dot.style.animationDuration = Math.random() * 10 + 5 + 's'; // Random animation duration
+            dotContainer.appendChild(dot);
+        }
+    }
+
+    // Create dots on page load
+    window.onload = createDots;
+ </script>
+
+
+ <!-- About me section -->
+
+ <section id="about-me"  style=" background-color: #fff;  font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #001413 ; text-align: center; padding: 50px;">
+    
+    <h1 style="font-size: 36px; margin-bottom: 10px;margin-left: 574px; text-align: left;color: #eefddf;">About Me</h1>
+    <p style="font-size: 18px; color: #eefddf;margin-left: 574px; text-align: left;">My introduction</p>
+    <div style=" box-shadow: 0 0 1px #eefddf; display: flex; justify-content: center; align-items: center; margin-top: 30px;">
+        <div style="flex: 1; max-width: 200px; text-align: center; float: left; margin-right: 90px; margin-top: -150px; ">
+            <img src="/Images/about 3.jpg" alt="Profile Picture" style=" float: left; width: 300px; height: auto; border-radius: 50%; margin-right: 90px; ">
+            
+        </div>
+
+        <div style="flex: 2; max-width: 600px; margin-left: 50px; text-align: left;">
+            <p style="font-size: 16px; color: #eefddf; line-height: 1.5;">
+                I'm Prachi Joshi, a Frontend Web Developer and UI/UX Designer with a B.Tech in Computer Science from IPS Academy. I create intuitive, user-friendly designs, and recently developed a Legal Resources Hub and a collaborative event management project. I'm eager to collaborate on innovative solutions and build amazing projects together!
+            </p>
+            <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                <div style="text-align: center;">
+                    <p style="font-size: 24px; color: #eefddf; margin: 0;">09.27</p>
+                    <p style="font-size: 14px; color: #eefddf; margin: 0;">Aggregate CGPA</p>
+                </div>
+                <div style="text-align: center;">
+                    <p style="font-size: 24px; color: #eefddf; margin: 0;">03</p>
+                    <p style="font-size: 14px; color: #eefddf; margin: 0;">Projects</p>
+                </div>
+                <div style="text-align: center;">
+                    <p style="font-size: 24px; color: #eefddf; margin: 0;">06</p>
+                    <p style="font-size: 14px; color: #eefddf; margin: 0;">Certifications</p>
+                </div>
+            </div><br>
+            <div style="text-align: left; margin-top: 20px;">
+                <a href="" target="_blank" style="  display: inline-block; padding: 10px 20px; background-color: #eefddf; color: #001f1d;  text-decoration: none; border-radius: 5px;">Download CV</a>
+            </div>
+ <br>
+
+        </div>
+    </div>
+ </section>
+
+
+ <!-- box-shadow: 0 0 0 2px #eefddf; used for box stroke-->
+ <!-- Skills section -->
+
+ <section style="font-family: Arial, sans-serif; background-color: #001413; color: #eefddf; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 90vh;">
+    <div style=" background-color: #001413; padding: 20px; border-radius: 0; width: 80%; height: 80%; max-width: 1400px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <div style="text-align: center; margin-bottom: 10px;">
+            <p style="font-size: 1.2em; font-weight: bold; font-size: 36px;">MY SKILLS</p>
+        </div>
+        <div class="image-content" style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                <!-- Skill Circles -->
+                <div style="width: 120px; height: 120px; border-radius: 50%; background-color: #001413; padding: 10px; margin: 10px; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
+                    <img src="/Images/c++.jpg" alt="Skill 1" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+                </div>
+                <div style="width: 120px; height: 120px; border-radius: 50%; background-color: #001413; padding: 10px; margin: 10px; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
+                    <img src="/Images/Html.jpg" alt="Skill 2" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+                </div>
+                <div style="width: 120px; height: 120px; border-radius: 50%; background-color: #001413; padding: 10px; margin: 10px; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
+                    <img src="/Images/Css.jpg" alt="Skill 3" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+                </div>
+                <div style="width: 120px; height: 120px; border-radius: 50%; background-color: #001413; padding: 10px; margin: 10px; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
+                    <img src="/Images/javascript.jpg" alt="Skill 4" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+                </div>
+                <div style="width: 120px; height: 120px; border-radius: 50%; background-color: #001413; padding: 10px; margin: 10px; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
+                    <img src="/Images/mysql.jpg" alt="Skill 5" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+                </div>
+                <!-- <div style="width: 120px; height: 120px; border-radius: 50%; background-color: #001F1D; padding: 10px; margin: 10px; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
+                    <img src="/Src/Images/Reactjs.jpg" alt="Skill 6" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+                </div> -->
+            </div>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                <!-- Additional Skill Circles -->
+                <div style="width: 120px; height: 120px; border-radius: 50%; background-color: #001413; padding: 10px; margin: 10px; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
+                    <img src="/Images/Github.jpg" alt="Skill 7" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+                </div>
+                <div style="width: 120px; height: 120px; border-radius: 50%; background-color: #001413; padding: 10px; margin: 10px; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
+                    <img src="/Images/Mongodb.jpg" alt="Skill 8" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+                </div>
+                <div style="width: 120px; height: 120px; border-radius: 50%; background-color: #001413; padding: 10px; margin: 10px; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
+                    <img src="/Images/Nodejs.jpg" alt="Skill 9" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+                </div>
+                <div style="width: 120px; height: 120px; border-radius: 50%; background-color: #001413; padding: 10px; margin: 10px; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
+                    <img src="/Images/figma.jpg" alt="Skill 10" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+                </div>
+                <div style="width: 120px; height: 120px; border-radius: 50%; background-color: #001413; padding: 10px; margin: 10px; display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease;">
+                    <img src="/Images/Vscode.jpg" alt="Skill 11" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+
+
+
+ <!-- project section -->
+
+
+ <section id="projects" style=" background-color:  #001413; color: #eefddf; text-align: center; padding: 50px;">
+    <div class="container" style=" max-width: 1200px; margin: 0 auto;">
+        <div class="projects-title" style=" font-size: 3rem; margin-bottom: 20px; color: #eefddf; font-family: Arial, sans-serif; ">Browse My Recent Projects</div><br>
+        <br> <br>
+        <div class="projects" style="display: flex; gap: 20px; justify-content: space-between; margin: 0 15px;">
+            <div class="project" style="position: relative; background-color: #001413; width: 600px;   border-radius: 10px;padding: 20px;box-shadow: 0 0 0 1px #eefddf; margin: 0 10px; overflow: hidden; transition: transform 0.5s, box-shadow 0.5s;">
+                <img src="/Images/Festive Nest 1.jpg" alt="Project One" style="width: 100%; border-radius: 10px;">
+                <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0, 59, 54, 0.3), rgba(0, 59, 54, 0.1));  opacity: 0; transition: opacity 0.5s; z-index: 1;"></div>
+                <div class="project-title" style="text-align: left; font-size: 1.5rem; margin: 15px 0;">FestiveNest.com</div>
+                <div class="project-description" style="text-align: left; font-size: 1rem; color: #eefddf; margin: 10px 0; text-align: justify;">Led frontend development in a college event management project with React.js, enhancing user experience with key features like QR code generation and ticket design.</div><br>
+                <div class="project-buttons" style="display: flex; justify-content: space-between;position: relative; z-index: 2;">
+                    <a href="" target="_blank" style="text-decoration: none; background-color: #eefddf; color: #001413; padding: 10px 15px; border-radius: 5px; transition: background-color 0.3s;">Live Demo</a>
+                </div>
+                
+            </div>
+            <div class="project" style="position: relative; box-shadow: 0 0 0 1px #eefddf;  border-radius: 10px; background-color: #001413; width: 600px; padding: 20px; margin: 0 10px; overflow: hidden; transition: transform 0.5s, box-shadow 0.5s;">
+                <img src="/Images/ui ux thumbnail 2.jpg" alt="Project Two" style="width: 100%; border-radius: 10px;">
+                <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0, 59, 54, 0.3), rgba(0, 59, 54, 0.1));opacity: 0; transition: opacity 0.5s; z-index: 1;"></div>
+                <div class="project-title" style="text-align: left; font-size: 1.5rem; margin: 15px 0;">Prep Master App/Web Design</div>
+                <div class="project-description" style="text-align: left; font-size: 1rem; color: #eefddf; margin: 10px 0; text-align: justify;">I developed the UI for a web and app platform that offers personalized study plans, practice tests, tailored resources, and real-time progress tracking.</div><br>
+                <div class="project-buttons" style="display: flex; justify-content: space-between;position: relative; z-index: 2;">
+                    <a href="" target="_blank" style="text-decoration: none; background-color: #eefddf; color: #003b36; padding: 10px 15px; border-radius: 5px; transition: background-color 0.3s;">Figma</a>
+                    <!-- <a href="#" style="text-decoration: none; background-color: #eefddf; color: #001413; padding: 10px 15px; border-radius: 5px; transition: background-color 0.3s;">Live Demo</a> -->
+                </div>
+            </div>
+            <div class="project" style="position: relative; box-shadow: 0 0 0 1px #eefddf;   border-radius: 10px; background-color: #001413; width: 600px; padding: 20px; margin: 0 10px; overflow: hidden; transition: transform 0.5s, box-shadow 0.5s;">
+                <img src="/Images/Legal resources hub.jpg" alt="Project Three" style="width: 100%; border-radius: 10px;">
+                <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0, 59, 54, 0.3), rgba(0, 59, 54, 0.1)); opacity: 0; transition: opacity 0.5s; z-index: 1;"></div>
+                <div class="project-title" style="text-align: left; font-size: 1.5rem; margin: 15px 0;">Legal Resources Hub</div>
+                <div class="project-description" style="text-align: left; font-size: 1rem; color: #eefddf; margin: 10px 0; text-align: justify;">Created a platform for easy lawyer consultations and improved appointment bookings, using HTML, CSS, JavaScript, PHP, and MySQL.</div><br>
+                <div class="project-buttons" style="display: flex; justify-content: space-between; position: relative; z-index: 2;">
+                    <a href=""  target="_blank" style="text-decoration: none; background-color: #eefddf; color: #003b36; padding: 10px 15px; border-radius: 5px; transition: background-color 0.3s;">Live Demo</a>
+                    <!-- <a href="#" style="text-decoration: none; background-color: #eefddf; color: #001413; padding: 10px 15px; border-radius: 5px; transition: background-color 0.3s;">Live Demo</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.project').forEach(project => {
+            project.addEventListener('mouseover', () => {
+                project.style.transform = 'scale(1.05)';
+                project.querySelector('.overlay').style.opacity = '1';
+            });
+            project.addEventListener('mouseout', () => {
+                project.style.transform = 'scale(1)';
+                project.querySelector('.overlay').style.opacity = '0';
+            });
+        });
+    </script>
+ </section>
+
+
+ <!-- Certifications section -->
+
+
+ <section id="certifications" style="background-color: #001413; color: #95D2B3; padding: 50px;">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+        <h2 style="font-size: 3rem; margin-bottom: 20px; color: #eefddf;">Certifications</h2>
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-title">Foundations of User Experience (UX) Design</div>
+                <div class="accordion-content">
+                   <a href="" target="_blank">
+                    <img src="/Images/Certificate1.jpg"   alt="Certificate 1" style="width: 800px; height: 600px; border-radius: 8px;">
+                   </a> 
+                    <p style="text-align: left;">The "Foundations of User Experience (UX) Design" course by Google equips learners with essential skills in user-centered design, accessibility, and design sprints. Achieved a grade of 85.83%</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-title">The SQL Programming Essential Immersive Training</div>
+                <div class="accordion-content">
+                    <a href="" target="_blank">
+                        <img src="/Images/Certificate2.jpg" alt="Certificate 2" style="width: 800px; height: 600px; border-radius: 8px;">
+                    </a>
+                    <p style="text-align: left;">"The SQL Programming Essential Immersive Training" course by Udemy covers foundational SQL concepts, including database creation, data manipulation, and query optimization, providing practical skills for managing and analyzing data efficiently.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-title">Start the UX Design Process: Empathize, Define, and Ideate</div>
+                <div class="accordion-content">
+                    <a href="" target="_blank">
+                        <img src="/Images/Certificate3.jpg" alt="Certificate 3" style="width: 800px; height: 600px; border-radius: 8px;">  
+                    </a>
+                    <p style="text-align: left;">The "Start the UX Design Process: Empathize, Define, and Ideate" course covers empathizing with users, developing problem statements, and generating solution ideas. Prachi Joshi achieved a grade of 86.14%</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-title">TCS iON Career Edge - Young Professional</div>
+                <div class="accordion-content">
+                    <img src="/Images/Certificate4.jpg" alt="Certificate 4" style="width: 800px; height: 600px; border-radius: 8px;">
+                    <p style="text-align: left;">This course, conducted by TCS, focuses on enhancing communication skills and personality development, preparing young professionals for the workforce.</p>
+                </div>
+                
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-title">Conduct UX Research and Test Early Concepts</div>
+                <div class="accordion-content">
+                    <a href="" target="_blank">
+                        <img src="/Images/Certificate5.jpg" alt="Certificate 5" style="width: 800px; height: 600px; border-radius: 8px;">
+                    </a>
+                    <p style="text-align: left;" >The Conduct UX Research and Test Early Concepts" course covers planning and conducting usability studies, synthesizing insights, and modifying designs based on research insights. Achieved a grade of 91.12%.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-title">Build Wireframes and Low-Fidelity Prototypes</div>
+                <div class="accordion-content">
+                   <a href="" target="_blank">
+                    <img src="/Images/Certificate6.jpg" alt="Certificate 6" style="width: 800px; height: 600px; border-radius: 8px;">
+                   </a> 
+                    <p style="text-align: left;">The "Build Wireframes and Low-Fidelity Prototypes" course focuses on creating storyboards, wireframes, and prototypes both on paper and digitally using Figma. Prachi Joshi achieved a grade of 100%.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
+<!-- style of certification secion -->
+ <style>
+    .accordion {
+        background-color: #001f1d;
+        border-radius: 8px;
+    }
+
+    .accordion-item {
+        border-bottom: 1px solid #eefddf;
+    }
+
+    .accordion-title {
+        padding: 15px;
+        cursor: pointer;
+        background-color:#001413;
+        color: #eefddf;
+        font-weight: bold;
+    }
+
+    .accordion-content {
+        display: none;
+        padding: 15px;
+        background-color: #001f1d;
+        color: white;
+    }
+
+    .accordion-item.active .accordion-content {
+        display: block;
+    }
+ </style>
+
+<!-- script for  certification secion -->
+
+ <script>
+    document.querySelectorAll('.accordion-title').forEach(title => {
+        title.addEventListener('click', () => {
+            const item = title.parentNode;
+            item.classList.toggle('active');
+        });
+    });
+ </script>
+
+
+ <!-- contact new section -->
+ <section id="contact" style="border: 1px solid #f0f0f0; background-color: #001413; color: #003b36; font-family: Arial, sans-serif; text-align: center; padding-top: 50px;">
+    <div style="max-width: 900px; height: 450px; margin: 0 auto;">
+        <h2 style="margin-bottom: 20px; color: #eefddf; font-family: Arial, sans-serif;">"Reach out and let's make something great together!"</h2><br><br><br>
+        <div style="display: flex; justify-content: space-around; align-items: center; margin-bottom: 50px;">
+            <img src="/Images/Contact us.jpg" alt="Illustration" style="width: 350px; height: auto;">
+            <div style="max-width: 300px;">
+                <h3 style="margin-bottom: 20px; color: #eefddf">Get in Touch</h3>
+                <form id="contact-form" onsubmit="sendEmail(event)">
+                    <input id="name" type="text" name="name" placeholder="Your Name" style="width: 100%; padding: 10px; margin-bottom: 10px; border: none; border-bottom: 1px solid #eefddf; background-color: transparent; color: #eefddf;">
+                    <input id="email" type="email" name="email" placeholder="Email Address" style="width: 100%; padding: 10px; margin-bottom: 10px; border: none; border-bottom: 1px solid #eefddf; background-color: transparent; color: #eefddf;">
+                    <textarea id="message" name="message" placeholder="Type your Message" style="width: 100%; padding: 10px; margin-bottom: 20px; border: none; border-bottom: 1px solid #eefddf; background-color: transparent; color: #eefddf;"></textarea>
+                    <button type="submit" style="width: 100%; padding: 10px; background-color: #eefddf; color: #001f1d; border: none; border-radius: 5px; cursor: pointer;">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- script function for email sending using email.js -->
+
+<script type="text/javascript">
+    function sendEmail(event) {
+        event.preventDefault(); // Prevent form from submitting the traditional way
+
+        const templateParams = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value,
+        };
+
+        emailjs.send('service ID', 'template ID', templateParams) // First service ID, second template ID
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Email sent successfully!');
+                document.getElementById('contact-form').reset(); // Reset form after submission
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert('Failed to send email. Please try again later.');
+            });
+    }
+
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+    });
+</script>
+
+
+
+ </body>
+</html>
+
+
